@@ -27,7 +27,7 @@ public class WebserviceApplication {
     public CommandLineRunner run(RestTemplate restTemplate) throws Exception {
         return args -> {
             Quote quote = restTemplate.getForObject(
-                    "https://gturnquist-quoters.cfapps.io/api/random", Quote.class);
+                    "https://www.maripavi.at/swagger-ui/index.html", Quote.class);
             log.info(quote.toString());
         };
     }

@@ -22,15 +22,22 @@ public class WebserviceApplication {
     public RestTemplate restTemplate(RestTemplateBuilder builder) {
         return builder.build();
     }
-/*
+
+
     @Bean
     public CommandLineRunner run(RestTemplate restTemplate) throws Exception {
         return args -> {
-            Quote quote = restTemplate.getForObject(
-                    "https://www.maripavi.at/swagger-ui/index.html", Quote.class);
-            log.info(quote.toString());
+            String products = restTemplate.getForObject(
+                    "https://www.maripavi.at/produkt/material", String.class);
+            log.info(String.valueOf(products));
         };
     }
-    }
-*/
+
 }
+
+/*
+https://www.maripavi.at/api/account
+https://www.maripavi.at/api/bestellung
+https://www.maripavi.at/api/produkt
+*/
+

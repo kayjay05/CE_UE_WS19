@@ -17,8 +17,26 @@ public class CustomerController {
 
     private static final Logger log = LoggerFactory.getLogger(WebserviceApplication.class);
 
+    @RequestMapping("/createCustomer")
+    public String inputCust() {
+        return "custinput";
+    }
 
+
+    @RequestMapping(value = "/createCustomer", method = RequestMethod.POST)
+    public String cust(HttpServletRequest request, Model model) {
+
+        String firstName = request.getParameter("firstName");
+        String lastName = request.getParameter("lastName");
+        String message = "User " + firstName + " " + lastName + " created";
+        model.addAttribute("message", message);
+
+        log.info(message);
+
+        return "createCustomer";
+    }
 }
+
 
     /*
     @RequestMapping("/account")

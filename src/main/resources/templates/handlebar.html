@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>handlebar</title>
@@ -7,5 +7,18 @@
 <body>
 <h1>Communications Engineering UE - Aufgabe 4</h1>
 <h2>Create Handlebar Configuration</h2>
+<h3>Get Handlebar Types</h3>
+<p>Available handlebar types:</p>
+<p th:text="${handlebars}"></p>
+<form method="post">
+    <table border="0">
+        <tr>
+            <td>Handlebar:</td>
+            <td><input type="text" name="handlebarType" required="true"></input></td>
+        </tr>
+    </table>
+    <br/>
+    <button type="submit" href="/material">Submit</button>
+</form>
 </body>
 </html>

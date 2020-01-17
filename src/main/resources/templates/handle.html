@@ -1,10 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>handle</title>
 </head>
 <body>
-
+<h1>Communications Engineering UE - Aufgabe 4</h1>
+<h2>Create Handlebar Configuration</h2>
+<h3>Get Handlebar Types</h3>
+<p>Available types of Handles:</p>
+<p th:text="${handles}"></p>
+<form method="post">
+    <table border="0">
+        <tr>
+            <td>Handle:</td>
+            <td><input type="text" name="handle" required="true"></input></td>
+        </tr>
+    </table>
+    <br/>
+    <button type="submit" href="/order">Submit</button>
+</form>
 </body>
 </html>

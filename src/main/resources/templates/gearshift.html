@@ -1,11 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>gearshift</title>
 </head>
 <body>
-<h1>gearshift</h1>
-
+<h1>Communications Engineering UE - Aufgabe 4</h1>
+<h2>Create Handlebar Configuration</h2>
+<h3>Get Handlebar Types</h3>
+<p>Available types of Gearshift:</p>
+<p th:text="${gearshifts}"></p>
+<form method="post">
+    <table border="0">
+        <tr>
+            <td>Gearshift:</td>
+            <td><input type="text" name="gearlever" required="true"></input></td>
+        </tr>
+    </table>
+    <br/>
+    <button type="submit" href="/handle">Submit</button>
+</form>
 </body>
 </html>

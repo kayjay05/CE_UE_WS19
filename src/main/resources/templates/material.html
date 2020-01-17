@@ -1,10 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>material</title>
 </head>
 <body>
-
+<h1>Communications Engineering UE - Aufgabe 4</h1>
+<h2>Create Handlebar Configuration</h2>
+<h3>Get Material</h3>
+<p>Available types of material:</p>
+<p th:text="${availableMaterials}"></p>
+<form method="post">
+    <table border="0">
+        <tr>
+            <td>Material:</td>
+            <td><input type="text" name="material" required="true"/></td>
+        </tr>
+    </table>
+    <br />
+    <button type="submit" href="/gearshift">Submit</button>
+</form>
 </body>
 </html>

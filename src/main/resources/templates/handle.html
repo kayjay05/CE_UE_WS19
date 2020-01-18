@@ -7,24 +7,15 @@
 <body>
 <h1>Communications Engineering UE - Aufgabe 4</h1>
 <h2>Create Handlebar Configuration</h2>
-<h3>Get Handlebar Types</h3>
+<h3>Get Handle</h3>
 <p>Available types of Handles:</p>
 <p th:text="${handles}"></p>
 <form method="post">
-    <table border="0">
-        <tr>
-            <td>Material:</td>
-            <td><input type="text" name="handle" required="true"/></td>
-        </tr>
-    </table>
-    <br/>
-    <button type="submit">Submit</button>
+    Handle: <input type="text" name="handle" required="true"><br>
+    <input type="submit" value="Submit">
 </form>
 </br>
 <p><a href="/order">Check Out</a></p>
-<!--<form method="post" action="/order">
-    Handle: <input type="text" name="handle" required="true"><br>
-    <input type="submit" value="Submit">
-</form>-->
+
 </body>
 </html>

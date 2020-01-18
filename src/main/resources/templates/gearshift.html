@@ -7,24 +7,15 @@
 <body>
 <h1>Communications Engineering UE - Aufgabe 4</h1>
 <h2>Create Handlebar Configuration</h2>
-<h3>Get Handlebar Types</h3>
+<h3>Get Gearshift</h3>
 <p>Available types of Gearshift:</p>
 <p th:text="${gearshifts}"></p>
 <form method="post">
-    <table border="0">
-        <tr>
-            <td>Material:</td>
-            <td><input type="text" name="gearshift" required="true"/></td>
-        </tr>
-    </table>
-    <br/>
-    <button type="submit">Submit</button>
+    Gearshift: <input type="text" name="gearshift" required="true"><br>
+    <input type="submit" value="Submit">
 </form>
 </br>
 <p><a href="/handle">Continue with handle</a></p>
-<!--<form method="post" action="/handle">
-    Gearshift: <input type="text" name="gearshift" required="true"><br>
-    <input type="submit" value="Submit">
-</form>-->
+
 </body>
 </html>

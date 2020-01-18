@@ -16,6 +16,7 @@ public class CustomerController {
 
     @RequestMapping("/createCustomer")
     public String inputCustomer() {
+
         return "inputCustomer";
     }
 

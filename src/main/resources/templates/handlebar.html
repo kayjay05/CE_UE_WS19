@@ -11,20 +11,10 @@
 <p>Available handlebar types:</p>
 <p th:text="${handlebars}"></p>
 <form method="post">
-    <table border="0">
-        <tr>
-            <td>Handlebar:</td>
-            <td><input type="text" name="handlebar" required="true"></input></td>
-        </tr>
-    </table>
-    <br/>
-    <button type="submit">Submit</button>
+    Handlebar: <input type="text" name="handlebar" required="true"><br>
+    <input type="submit" value="Submit">
 </form>
 <br/>
 <p><a href="/material">Continue with material</a></p>
-<!--<form method="post" action="/material">
-    Handlebar: <input type="text" name="handlebar" required="true"><br>
-    <input type="submit" value="Submit">
-</form>-->
 </body>
 </html>

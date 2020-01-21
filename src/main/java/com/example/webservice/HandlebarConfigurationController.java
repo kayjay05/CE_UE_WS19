@@ -30,7 +30,6 @@ public class HandlebarConfigurationController {
 
     @RequestMapping(value = "/material", method = {RequestMethod.GET, RequestMethod.POST})
     public String pickMaterial(HttpServletRequest request, Model model) {
-        String restLink = "https://www.maripavi.at/produkt/material?lenkertyp=" + handlebar;
         String availableMaterials = restTemplate.getForObject("https://www.maripavi.at/produkt/material?lenkertyp=" + handlebar, String.class);
         material = request.getParameter("material");
         model.addAttribute("availableMaterials", availableMaterials);
@@ -38,7 +37,7 @@ public class HandlebarConfigurationController {
     }
 
     @RequestMapping(value = "/gearshift", method = {RequestMethod.GET, RequestMethod.POST})
-    public String chooseGearlever(HttpServletRequest request, Model model) {
+    public String pickGearlever(HttpServletRequest request, Model model) {
         String gearshifts = restTemplate.getForObject("https://www.maripavi.at/produkt/schaltung?lenkertyp=" + handlebar, String.class);
         gearshift = request.getParameter("gearshift");
         model.addAttribute("gearshifts", gearshifts);
